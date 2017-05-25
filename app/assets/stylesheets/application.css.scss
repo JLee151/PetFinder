@@ -42,20 +42,11 @@ h1, h2, h3 {
 }
 
 /* follow bootstrap heirarchy to apply css */
-.navbar-default .navbar-brand {
-  color: white;
-}
-
-.navbar-default .navbar-brand:hover {
-  color: black;
-  opacity: 0.5;
-}
-
+.navbar-default .navbar-brand,
 .navbar-default .navbar-nav > li > a {
   color: white;
-}
-
-.navbar-default .navbar-nav > li > a:hover {
-  color: black;
-  opacity: 0.5;
+  &:hover { // only applicable with sass
+    color: black;
+    opacity: 0.5;
+  }
 }
