@@ -31,12 +31,31 @@ h1, h2, h3 {
 }
 
 .home-page {
+    color: white;
     margin-top: -20px;
     padding-top: 50px;
     padding-bottom: 75px;
-    color: white;
 }
 
 .navbar {
     border: none;
+}
+
+/* follow bootstrap heirarchy to apply css */
+.navbar-default .navbar-brand {
+  color: white;
+}
+
+.navbar-default .navbar-brand:hover {
+  color: black;
+  opacity: 0.5;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: black;
+  opacity: 0.5;
 }
