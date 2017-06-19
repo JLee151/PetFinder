@@ -18,7 +18,8 @@
                         <%= f.text_area :comments, class: 'form-control' %>
                     </div>
                     <%= f.submit 'Submit', class: 'btn-default' %>
-                    <%= flash[:notice] %>
+                    <br>
+                    <%= flash[:error] %>
                 <% end %>
             </div>
         </div>
