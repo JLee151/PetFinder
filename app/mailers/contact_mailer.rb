@@ -6,6 +6,6 @@ class ContactMailer < ActionMailer::Base
         @email = email
         @comment = comment
         
-        mail(from :email, subject: "SaaS App Contact Form Message from #{@name}")
+        mail(from :email, subject: "SaaS App Contact Form Message from #{@name}!")
     end
 end
