@@ -24,6 +24,10 @@ h1, h2, h3 {
 	font-family: 'Roboto', sans-serif;
 }
 
+.center {
+	text-align: center;
+	list-style-position:inside;
+}
 /* the dot is in front of "navbar" since it is a class */
 .navbar, .home-page {
 	background: #517fa4;  /* fallback for old browsers */
@@ -72,4 +76,8 @@ h1, h2, h3 {
 
 .alert-notice {
 	display: none;
+}
+
+.home-signup-links {
+	margin-top: 30px;
 }
