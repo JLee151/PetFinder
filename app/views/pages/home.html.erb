@@ -13,7 +13,7 @@
 				<ul class="center">
 					<li>Get simple access</li>
 				</ul>
-				<%= link_to "Sign up with Basic", "#", class: 'btn btn-primary btn-lg btn-block' %>
+				<%= link_to "Sign up with Basic", new_user_registration_path(plan: @base_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
 			</div>
 		</div>
 
@@ -24,7 +24,7 @@
 				<ul class="center">
 					<li>Get access to information</li>
 				</ul>
-				<%= link_to "Sign up with Pro", "#", class: 'btn btn-success btn-lg btn-block' %>
+				<%= link_to "Sign up with Pro", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block' %>
 			</div>
 		</div>
 	</div>

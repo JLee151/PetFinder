@@ -28,7 +28,6 @@
 						<% if user_signed_in? %>
 							<%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-default navbar-btn" %>
 						<% else %>
-							<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-default navbar-btn" %> <!-- <a href="/users/sign_up" class="btn btn-default navbar-btn">Sign Up</a> -->
 							<%= link_to "Log In", new_user_session_path, class: "btn btn-default navbar-btn" %> <!-- <a href="/users/sign_in" class="btn btn-default navbar-btn">Log In</a> -->
 						<% end %>
 					</div>
