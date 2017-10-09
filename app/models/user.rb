@@ -1,11 +1,12 @@
 class User < ApplicationRecord
-	# Include default devise modules. Others available are:
-	# :confirmable, :lockable, :timeoutable and :omniauthable
+	# Include default devise modules
+	# Others available are: :confirmable, :lockable, :timeoutable and :omniauthable
 	devise :database_authenticatable, :registerable,
 			:recoverable, :rememberable, :trackable, :validatable
 
 	belongs_to :plan
 
+	# If valid form fields, Stripe sets up a subscription for customer
 	attr_accessor :stripe_card_token
 	def save_with_subscription
 		if valid?
