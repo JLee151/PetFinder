@@ -5,6 +5,7 @@ class User < ApplicationRecord
 			:recoverable, :rememberable, :trackable, :validatable
 
 	belongs_to :plan
+	has_one :profile
 
 	# If valid form fields, Stripe sets up a subscription for customer
 	attr_accessor :stripe_card_token
