@@ -1,0 +1,19 @@
+.avatar-show-img {
+	width: 150px;
+	height: 150px;
+}
+
+.well.profile-block {
+	h3 {
+		margin-top: 0;
+	}
+}
+
+.well.profile-descrip, .well.profile-contact {
+	background-color: #5cb85c;
+	border-color: #4cae4c;
+	h3 {
+		text-decoration: underline black;
+		text-align: center;
+	}
+}
