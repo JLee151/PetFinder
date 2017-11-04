@@ -5,28 +5,40 @@
 
 <div class="container home-signup-links">
 	<div class="row">
-
-		<div class="col-md-6">
-			<div class="well">
-				<h2 class="text-center">Basic Membership</h2>
-				<h4 class="text-center">Sign up for free account</h4>
-				<ul class="center">
-					<li>Get simple access</li>
-				</ul>
-				<%= link_to "Sign up with Basic", new_user_registration_path(plan: @base_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
+		<% if user_signed_in? %>
+			<div class="col-md-6">
+				<div class="well">
+					<h2 class="text-center">Your Account</h2></h2>
+					<% if current_user.profile %>
+						<%= link_to "Edit Your Profile", "#", class: 'btn btn-default btn-lg btn-block' %>
+						<%= link_to "View Your Profile", user_path(id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
+					<% else %>
+						<%= link_to "Create Your Profile", new_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
+					<% end %>
+				</div>
 			</div>
-		</div>
-
-		<div class="col-md-6">
-			<div class="well">
-				<h2 class="text-center">Pro Membership</h2>
-				<h4 class="text-center">Sign up for the pro account for $0.01/month</h4>
-				<ul class="center">
-					<li>Get access to information</li>
-				</ul>
-				<%= link_to "Sign up with Pro", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block' %>
+		<% else %>
+			<div class="col-md-6">
+				<div class="well">
+					<h2 class="text-center">Basic Membership</h2>
+					<h4 class="text-center">Sign up for free account</h4>
+					<ul class="center">
+						<li>Get simple access</li>
+					</ul>
+					<%= link_to "Sign up with Basic", new_user_registration_path(plan: @base_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
+				</div>
 			</div>
-		</div>
+
+			<div class="col-md-6">
+				<div class="well">
+					<h2 class="text-center">Pro Membership</h2>
+					<h4 class="text-center">Sign up for the pro account for $0.01/month</h4>
+					<ul class="center">
+						<li>Get access to information</li>
+					</ul>
+					<%= link_to "Sign up with Pro", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block' %>
+				</div>
+			</div>
+		<% end %>
 	</div>
-	<%= link_to "Create your profile!", new_user_profile_path(user_id: current_user.id) if user_signed_in? %>
 </div>
